@@ -1,0 +1,15 @@
+* {
+    font-family: 'Patrick Hand SC', cursive;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.gaamit-card {
+  box-shadow:2px 2px 4px rgba(0,0,0,0.4);
+}

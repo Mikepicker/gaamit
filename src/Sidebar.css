@@ -1,0 +1,13 @@
+#gaamit-sidebar {
+  max-width: 400px;
+  max-height: 150px;
+}
+
+.gaamit-sidebar-entry {
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+
+}
+.gaamit-sidebar-entry:hover {
+  transform: scale(1.4);
+}

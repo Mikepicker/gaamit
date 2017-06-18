@@ -1,0 +1,8 @@
+.gaamit-post-image {
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.gaamit-post {
+  cursor: pointer;
+}
