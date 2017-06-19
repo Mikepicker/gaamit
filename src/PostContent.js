@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import showdown from 'showdown';
-import $ from 'jquery';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import './PostContent.css';
 
 export default class PostContent extends Component {

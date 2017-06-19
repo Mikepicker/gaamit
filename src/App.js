@@ -7,6 +7,7 @@ import Posts from './Posts.js'
 import PostContent from './PostContent.js'
 import Info from './Info.js';
 import Loading from './Loading.js';
+import Login from './Login.js';
 import './App.css';
 
 class App extends Component {
@@ -62,6 +63,7 @@ class App extends Component {
 
     // Current page
     let pageTag;
+    let toggleJumbo = true;
     if (this.state.page === 'created' || this.state.page === 'hot' || this.state.page === 'trending') {
       pageTag =
       <div>
@@ -79,6 +81,9 @@ class App extends Component {
                                author={this.state.feed[this.state.postContent].author}
                                body={postContentBody}/>
       }
+    } else if (this.state.page === 'login') {
+      pageTag = <Login/>
+      toggleJumbo = false;
     }
 
     // Loading
@@ -90,7 +95,7 @@ class App extends Component {
       <div className="App">
         <Navbar page={this.state.page} changePage={this.changePage}/>
         <Header/>
-        <Jumbotron changePage={this.changePage}/>
+        {toggleJumbo ? <Jumbotron changePage={this.changePage}/> : null}
         {pageTag}
       </div>
     );

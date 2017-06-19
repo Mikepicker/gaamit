@@ -25,6 +25,9 @@ export default class Navbar extends Component {
             <li className={'nav-item ' + (this.props.page === 'info' ? 'active' : null)}>
               <div className="nav-link" onClick={() => this.props.changePage('info')}>How it works</div>
             </li>
+            <li className={'nav-item ' + (this.props.page === 'login' ? 'active' : null)}>
+              <div className="nav-link" onClick={() => this.props.changePage('login')}>Login</div>
+            </li>
           </ul>
           <form className="form-inline my-2 my-lg-0">
             <input id="gaamit-search" className="form-control mr-sm-2" type="text" placeholder="Search"/>
