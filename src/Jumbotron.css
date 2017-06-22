@@ -1,17 +1,17 @@
 .jumbotron{
     border-radius:0px!important;
-    box-shadow:1px 1px 4px rgba(0,0,0,0.4);
+    box-shadow:1px 1px 4px rgba(0,0,0,0);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-image: url(https://static.pexels.com/photos/316466/pexels-photo-316466.jpeg);
     position: relative;
     height: 100%;
+    margin-top: 100px;
 }
 
 .jumbotron .btn{
-    border-radius:0px!important;
-    box-shadow:1px 1px 4px rgba(0,0,0,0.4);
+    box-shadow:1px 1px 4px rgba(0,0,0,0);
     padding:10px 40px;
 }
 

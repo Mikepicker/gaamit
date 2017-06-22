@@ -1,6 +1,6 @@
 .gaamit-loading {
   animation: loading-spin infinite 1s linear;
-  height: 40px;
+  height: 80px;
   margin-top: 256px;
 }
 

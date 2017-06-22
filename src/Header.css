@@ -5,10 +5,14 @@
 }
 
 .App-header {
-  background-color: #333;
+  background-color: #e6ecf0;
   height: 250px;
   padding-top: 80px;
   color: white;
+}
+
+.gaamit-title {
+  color: #333;
 }
 
 @keyframes App-logo-spin {

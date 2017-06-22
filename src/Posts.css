@@ -1,3 +1,16 @@
 #gaamit-posts {
   max-width: 700px;
 }
+
+div.nav-link.active {
+  background-color: #4ba2f2 !important;
+  color: #fff !important
+}
+
+.nav-link {
+  color: #333;
+}
+
+.nav-link:hover {
+  color: #fff;
+}

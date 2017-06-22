@@ -11,5 +11,18 @@
 }
 
 .gaamit-card {
-  box-shadow:2px 2px 4px rgba(0,0,0,0.4);
+  border-radius: 0 !important;
+  border-color: transparent !important;
+  box-shadow:0px 1px 1px rgba(0,0,0,0);
+}
+
+#gaamit-main-container {
+  margin-top: 80px;
+}
+
+.img-circle {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 }

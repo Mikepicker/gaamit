@@ -24,7 +24,7 @@ export default class PostContent extends Component {
     } while (match);*/
 
     return (
-      <div className="container col-md-8 mt-3">
+      <div className="container col-md-12">
         <div className="card mb-3 pt-3 gaamit-card">
           <h4 className="card-title">{this.props.title}</h4>
           <p className="card-title">By <a href={"https://steemit.com/@" + this.props.author}>{this.props.author}</a></p>

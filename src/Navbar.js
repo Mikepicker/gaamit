@@ -9,19 +9,10 @@ export default class Navbar extends Component {
         <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
-        <a className="navbar-brand" href="#">Gaamit</a>
+        <div className="navbar-brand" onClick={() => this.props.changePage('created')}>Gaamit</div>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
-            <li className={'nav-item ' + (this.props.page === 'created' ? 'active' : null)}>
-              <div className="nav-link" onClick={() => this.props.changePage('created')}>New</div>
-            </li>
-            <li className={'nav-item ' + (this.props.page === 'hot' ? 'active' : null)}>
-              <div className="nav-link" onClick={() => this.props.changePage('hot')}>Hot</div>
-            </li>
-            <li className={'nav-item ' + (this.props.page === 'trending' ? 'active' : null)}>
-              <div className="nav-link" onClick={() => this.props.changePage('trending')}>Trending</div>
-            </li>
             <li className={'nav-item ' + (this.props.page === 'info' ? 'active' : null)}>
               <div className="nav-link" onClick={() => this.props.changePage('info')}>How it works</div>
             </li>

@@ -6,8 +6,9 @@ import Sidebar from './Sidebar.js';
 import Posts from './Posts.js'
 import PostContent from './PostContent.js'
 import Info from './Info.js';
-import Loading from './Loading.js';
 import Login from './Login.js';
+import ProfileCard from './ProfileCard.js';
+import NetworkCard from './NetworkCard.js';
 import './App.css';
 
 class App extends Component {
@@ -66,8 +67,19 @@ class App extends Component {
     let toggleJumbo = true;
     if (this.state.page === 'created' || this.state.page === 'hot' || this.state.page === 'trending') {
       pageTag =
-      <div>
-        <Posts feed={this.state.feed} changePage={this.changePage}/>
+      <div className="row justify-content-center">
+        <div className="hidden-xs-down col-md-3">
+          <ProfileCard/>
+        </div>
+        <div className="col-md-6">
+          <Posts page={this.state.page}
+                 changePage={this.changePage}
+                 feed={this.state.feed}
+                 changePage={this.changePage}/>
+          </div>
+        <div className="hidden-xs-down col-md-3">
+          <NetworkCard/>
+        </div>
       </div>
 
     } else if (this.state.page === 'info') {
@@ -86,17 +98,12 @@ class App extends Component {
       toggleJumbo = false;
     }
 
-    // Loading
-    if (!this.state.feed) {
-      pageTag = <Loading/>
-    }
-
     return (
       <div className="App">
         <Navbar page={this.state.page} changePage={this.changePage}/>
-        <Header/>
-        {toggleJumbo ? <Jumbotron changePage={this.changePage}/> : null}
-        {pageTag}
+        <div id="gaamit-main-container" className="container">
+          {pageTag}
+        </div>
       </div>
     );
   }

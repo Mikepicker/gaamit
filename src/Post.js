@@ -11,7 +11,7 @@ export default class Post extends Component {
 
     //let image = this.props.body.match(/(https?:\/\/.*\.(?:png|jpg|gif))/i);
     let image = this.props.image;
-    let imageTag = image ? <img className="card-img-top img-fluid" src={image[0]} alt=""/> : null;
+    let imageTag = image ? <img className="card-img-top ml-1 mr-1 img-fluid gaamit-post-image" src={image[0]} alt=""/> : null;
     let authorTag = <a href={"https://steemit.com/@" + this.props.author}>{this.props.author}</a>
 
     // Date
@@ -22,13 +22,17 @@ export default class Post extends Component {
     let diffDays = Math.round(Math.abs((todayDate.getTime() - postDate.getTime())/(oneDay)));
     console.log(diffDays);*/
 
+    let title = this.props.title;
+    if (title.length > 32) {
+      title = this.props.title.substring(0, 32) + '...';
+    }
+
     return (
-      <div className="card mb-3 gaamit-card gaamit-post" onClick={() => this.togglePost()}>
+      <div className="card mt-1 mb-1 gaamit-card col-6 col-md-6 col-lg-4 gaamit-post" onClick={() => this.togglePost()}>
         {imageTag}
-        <div className="card-block">
-          <h4 className="card-title">{this.props.title}</h4>
-          <i className="fa fa-heart-o"></i>
-          <p className="card-text"><small className="text-muted">By {authorTag} - Last updated on {postDate}</small></p>
+        <div className="card-block ml-1 mr-1 gaamit-post-inner">
+          <h6 className="card-title">{title}</h6>
+          <p className="card-text"><small className="text-muted">By {authorTag}</small></p>
         </div>
       </div>
     );
