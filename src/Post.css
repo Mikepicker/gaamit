@@ -13,3 +13,7 @@
 .gaamit-post-inner {
   background-color: #fff;
 }
+
+.gaamit-card-title {
+  min-height: 3rem;
+}

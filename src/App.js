@@ -9,6 +9,8 @@ import Info from './Info.js';
 import Login from './Login.js';
 import ProfileCard from './ProfileCard.js';
 import NetworkCard from './NetworkCard.js';
+import ProfilePage from './ProfilePage.js';
+import Footer from './Footer.js';
 import './App.css';
 
 class App extends Component {
@@ -23,7 +25,7 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    this.changePage('created');
+    this.changePage('profile');
   }
 
   changePage= (newPage, params) => {
@@ -67,15 +69,14 @@ class App extends Component {
     let toggleJumbo = true;
     if (this.state.page === 'created' || this.state.page === 'hot' || this.state.page === 'trending') {
       pageTag =
-      <div className="row justify-content-center">
+      <div className="row">
         <div className="hidden-xs-down col-md-3">
-          <ProfileCard/>
+          <ProfileCard changePage={this.changePage}/>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-6 p-0">
           <Posts page={this.state.page}
                  changePage={this.changePage}
-                 feed={this.state.feed}
-                 changePage={this.changePage}/>
+                 feed={this.state.feed}/>
           </div>
         <div className="hidden-xs-down col-md-3">
           <NetworkCard/>
@@ -96,14 +97,17 @@ class App extends Component {
     } else if (this.state.page === 'login') {
       pageTag = <Login/>
       toggleJumbo = false;
+    } else if (this.state.page === 'profile') {
+      pageTag = <ProfilePage changePage={this.changePage}/>
     }
 
     return (
       <div className="App">
         <Navbar page={this.state.page} changePage={this.changePage}/>
-        <div id="gaamit-main-container" className="container">
+        <div id="gaamit-main-container" className="container mb-5">
           {pageTag}
         </div>
+        <Footer/>
       </div>
     );
   }

@@ -19,7 +19,7 @@ export default class Posts extends Component {
 
   renderPills = () => {
     return (
-      <div className="card gaamit-card pt-2 pb-2 ml-1 mr-1">
+      <div className="card gaamit-card pt-2 pb-2 mb-3">
         <ul className="nav nav-pills justify-content-center">
           <li className="nav-item">
             <div className={'nav-link ' + (this.props.page === 'home' ? 'active' : null)} onClick={(e) => this.onClickTab(e, 'created')}>Home</div>
@@ -48,14 +48,15 @@ export default class Posts extends Component {
       // Filter non-english
       if (data && !data.body.match(/[^\x00-\x7F]+/g)) {
         posts.push(
-          <Post key={key++}
-                id={content}
-                title={data.title}
-                author={data.author}
-                lastUpdate={data.last_update}
-                image={JSON.parse(data.json_metadata).image}
-                body={data.body}
-                changePage={this.props.changePage}/>);
+          <div key={key++} className="col-6 col-md-6 col-lg-4 p-0">
+            <Post id={content}
+                  title={data.title}
+                  author={data.author}
+                  lastUpdate={data.last_update}
+                  image={JSON.parse(data.json_metadata).image}
+                  body={data.body}
+                  changePage={this.props.changePage}/>
+          </div>);
       }
     }
 

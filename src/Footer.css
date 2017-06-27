@@ -1,0 +1,14 @@
+#gaamit-footer {
+  position: relative;
+  bottom: 0;
+  height: 64px;
+  width: 100%;
+  background-color: #fff;
+}
+
+#gaamit-footer-text {
+  margin-top: 2rem;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}

@@ -1,0 +1,81 @@
+#profile-banner {
+  position: relative;
+  height: 24rem;
+}
+
+#profile-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#profile-headline {
+  position: absolute;
+  height: 8rem;
+  bottom: -4rem;
+  left: 2rem;
+  z-index: 1;
+}
+
+#profile-avatar {
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  border-color: #fff;
+  border-width: thick;
+  border-style: solid;
+  float: left;
+}
+
+#profile-title {
+  margin-top: 1rem;
+  margin-left: 2rem;
+  color: #fff;
+  text-align: center;
+  float: left;
+}
+
+#profile-follow {
+  position: absolute;
+  border-color: #fff !important;
+  color: #fff !important;
+  left: 12rem;
+  bottom: -3.5rem;
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  #profile-headline {
+    position: absolute;
+    height: 5rem;
+    bottom: -2rem;
+    left: 1rem;
+    z-index: 1;
+  }
+
+  #profile-avatar {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-color: #fff;
+    border-width: thick;
+    border-style: solid;
+    float: left;
+  }
+
+  #profile-title {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    color: #fff;
+    text-align: center;
+    float: left;
+    font-size: 1.6rem;
+  }
+}
+
+#profile-sub-banner {
+  position: relative;
+  width: 100%;
+  height: 4rem;
+  background-color: #fff;
+}
